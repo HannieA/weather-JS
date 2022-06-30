@@ -38,8 +38,8 @@ label {
 img {
   width: 400px;
   position: relative;
-  left: 400px;
-  top: 0px;
+  left: 460px;
+  top: -60px;
   opacity: 0.1;
 }
 
@@ -52,7 +52,7 @@ section.currentWheather {
 
 h1,
 i,
-h3,
+ul.currentTemp,
 small {
   padding-top: 20px;
 }
@@ -68,22 +68,28 @@ h2.currentDate {
   padding-top: 0px;
   font-size: 25px;
 }
-h3 {
-  font-size: 60px;
+
+ul.currentTemp {
   padding-top: 5px;
+  padding-left: 0px;
   text-align: left;
-  margin-bottom: 0px;
 }
 
+span.currentDegree {
+  font-size: 70px;
+}
+.celsius,
+.fahren {
+  font-size: 30px;
+}
+li.currentCondition {
+  font-size: 25px;
+  line-height: 10px;
+}
 a {
   color: white;
 }
 
-p.currentConditions {
-  font-size: 25px;
-  padding-top: 0px;
-  text-align: left;
-}
 ul {
   list-style: none;
   text-align: center;
