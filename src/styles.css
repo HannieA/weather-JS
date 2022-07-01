@@ -9,11 +9,12 @@ body {
 }
 input {
   border: 1px solid #596aca;
+  color: gray;
   border-radius: 10px;
   height: 35px;
   width: 230px;
   font-size: smaller;
-  text-align: left;
+  text-align: center;
   padding-left: 10px;
 }
 
@@ -24,8 +25,10 @@ label {
 #buttonCurrentLoc {
   background-color: white;
   color: gray;
-  margin-top: 15px;
-  padding: 15px 10px;
+  font-size: smaller;
+  text-align: center;
+  margin-top: 10px;
+  padding: 7px 58px;
   border-radius: 10px;
   border: none;
   transition: 180ms ease-in-out;
