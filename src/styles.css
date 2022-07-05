@@ -5,7 +5,7 @@ body {
 .container {
   max-width: 830px;
   margin: auto;
-  padding: 30px 60px;
+  padding: 30px;
 }
 input {
   border: 1px solid #596aca;
@@ -81,7 +81,7 @@ ul.currentTemp {
 }
 
 span#temperature {
-  font-size: 100px;
+  font-size: 120px;
 }
 .celsius,
 .fahren {
@@ -145,4 +145,5 @@ ul.forecast1day,
 .signature {
   color: white;
   margin-top: 20px;
+  font-size: 15px;
 }
