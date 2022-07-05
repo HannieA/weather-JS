@@ -36,7 +36,7 @@ function showTemp(response) {
   let displayTemp = document.querySelector("#temperature");
   displayTemp.innerHTML = currentTemp;
   let currentConditions = document.querySelector("#conditions");
-  currentConditions.innerHTML = response.data.weather[0].main;
+  currentConditions.innerHTML = response.data.weather[0].description;
   let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(response.data.wind.speed);
   let humidity = document.querySelector("#humidity");

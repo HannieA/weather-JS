@@ -76,6 +76,10 @@ ul.currentTemp {
   padding-top: 0px;
   text-align: left;
 }
+
+#conditions:first-letter {
+  text-transform: capitalize;
+}
 .blockTemp {
   line-height: 1;
 }
