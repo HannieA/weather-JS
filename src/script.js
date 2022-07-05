@@ -1,4 +1,7 @@
-function showCurrentDay() {
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
   let days = [
     "Sunday",
     "Monday",
@@ -8,31 +11,9 @@ function showCurrentDay() {
     "Friday",
     "Saturday",
   ];
-  let months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-
-  let dayToday = new Date();
-  let currentDay = days[dayToday.getDay()];
-  let currentDate = dayToday.getDate();
-  let currentMonth = months[dayToday.getMonth()];
-
-  let dateToday = document.querySelector(".currentDate");
-  dateToday.innerHTML = `${currentDay}, ${currentDate} ${currentMonth}`;
+  let day = days[date.getDay()];
+  return `${day}, ${hours}:${minutes}`;
 }
-
-showCurrentDay();
 
 function showCity(event) {
   event.preventDefault();
@@ -60,6 +41,8 @@ function showTemp(response) {
   wind.innerHTML = Math.round(response.data.wind.speed);
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = Math.round(response.data.main.humidity);
+  let currentTime = document.querySelector(".currentDate");
+  currentTime.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function handlePosition(position) {
