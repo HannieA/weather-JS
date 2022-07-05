@@ -28,7 +28,7 @@ function showCurrentDay() {
   let currentDate = dayToday.getDate();
   let currentMonth = months[dayToday.getMonth()];
 
-  let dateToday = document.querySelector("h2.currentDate");
+  let dateToday = document.querySelector(".currentDate");
   dateToday.innerHTML = `${currentDay}, ${currentDate} ${currentMonth}`;
 }
 
@@ -49,11 +49,17 @@ searchInput.addEventListener("submit", showCity);
 
 function showTemp(response) {
   let city = response.data.name;
-  let currentCity = document.querySelector("h1");
+  let currentCity = document.querySelector("#city");
   currentCity.innerHTML = `${city.trim()}`;
   let currentTemp = Math.round(response.data.main.temp);
-  let displayTemp = document.querySelector(".currentTemp");
+  let displayTemp = document.querySelector("#temperature");
   displayTemp.innerHTML = currentTemp;
+  let currentConditions = document.querySelector("#conditions");
+  currentConditions.innerHTML = response.data.weather[0].main;
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = Math.round(response.data.wind.speed);
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = Math.round(response.data.main.humidity);
 }
 
 function handlePosition(position) {
@@ -67,10 +73,16 @@ function handlePosition(position) {
 function showLocationTemp(response) {
   let locationTemp = Math.round(response.data.main.temp);
   let locationCity = response.data.name;
-  let displayTemp = document.querySelector(".currentTemp");
+  let displayTemp = document.querySelector("#temperature");
   displayTemp.innerHTML = locationTemp;
   let header = document.querySelector("h1");
   header.innerHTML = locationCity;
+  let currentConditions = document.querySelector("#conditions");
+  currentConditions.innerHTML = response.data.weather[0].main;
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = Math.round(response.data.wind.speed);
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = Math.round(response.data.main.humidity);
 }
 
 function getLocation() {

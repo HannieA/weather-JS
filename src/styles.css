@@ -3,9 +3,9 @@ body {
   font-family: "Comfortaa", cursive;
 }
 .container {
-  max-width: 1000px;
+  max-width: 830px;
   margin: auto;
-  padding: 15px 60px;
+  padding: 30px 60px;
 }
 input {
   border: 1px solid #596aca;
@@ -39,11 +39,11 @@ label {
 }
 
 img {
-  width: 400px;
+  width: 350px;
   position: relative;
-  left: 460px;
-  top: -60px;
-  opacity: 0.1;
+  left: 370px;
+  top: -80px;
+  opacity: 0.08;
 }
 
 section.currentWheather {
@@ -51,44 +51,48 @@ section.currentWheather {
   top: -320px;
   color: white;
   width: 100%;
+  padding-top: 20px;
 }
 
-h1,
-i,
-ul.currentTemp,
-small {
-  padding-top: 20px;
+.col-8 {
+  text-align: left;
 }
 h1 {
   display: inline;
   font-size: 65px;
+  text-transform: capitalize;
 }
 i.fa-regular.fa-sun {
   font-size: 70px;
-  padding-left: 25px;
+  padding-left: 15px;
 }
-h2.currentDate {
+.currentDate {
   padding-top: 0px;
   font-size: 25px;
 }
 
 ul.currentTemp {
-  padding-top: 5px;
   padding-left: 0px;
+  padding-top: 0px;
   text-align: left;
 }
+.blockTemp {
+  line-height: 1;
+}
 
-span.currentDegree {
-  font-size: 70px;
+span#temperature {
+  font-size: 100px;
 }
 .celsius,
 .fahren {
-  font-size: 30px;
-}
-li.currentCondition {
   font-size: 25px;
-  line-height: 10px;
 }
+div.description {
+  font-size: 18px;
+  line-height: 28px;
+  padding-top: 15px;
+}
+
 a {
   color: white;
 }
@@ -101,53 +105,18 @@ ul {
 div.row {
   text-align: center;
 }
-ul.currentMorning {
-  padding-left: 60px;
-}
-li.morningTemp,
-.dayTemp,
-.eveningTemp,
-.nightTemp {
-  font-size: 25px;
-}
-li.morningIcon,
-.dayIcon,
-.nightIcon,
-.eveningIcon {
-  font-size: 25px;
+div.col {
+  padding-top: 50px;
 }
 
-hr {
-  transform: rotate(90deg);
-  width: 70px;
+.forecast {
   position: relative;
-  top: -100px;
-  left: 160px;
-}
-
-.detailsWheather {
-  text-align: center;
-  width: 590px;
-  background-color: #8e95e1;
-  opacity: 0.7;
-  border: 0px;
-  border-radius: 10px;
-  padding: 20px;
-  position: relative;
-  left: 200px;
-}
-
-p.perticipation,
-.wind,
-.uv,
-.humidity {
-  padding-top: 0px;
+  top: -320px;
 }
 .card {
   background-color: #5f6ef2;
   opacity: 0.7;
-  position: relative;
-  top: -280px;
+  margin-top: 0px;
   color: white;
 }
 ul.forecast1day,
@@ -158,17 +127,22 @@ ul.forecast1day,
   padding: 0px;
 }
 
-section.forecast5days .temperature1,
+.temperature1,
 .temperature2,
 .temperature3,
 .temperature4,
 .temperature5 {
   font-size: 25px;
 }
-section.forecast5days .icon1,
+.icon1,
 .icon2,
 .icon3,
 .icon4,
 .icon5 {
   font-size: 25px;
+}
+
+.signature {
+  color: white;
+  margin-top: 20px;
 }

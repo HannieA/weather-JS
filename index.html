@@ -42,86 +42,36 @@
         </form>
         <button id="buttonCurrentLoc">current location</button>
       </header>
+
       <img src="images/sun.svg" alt="" />
       <section class="currentWheather">
-        <h1>KYIV</h1>
-        <i class="fa-regular fa-sun"></i>
-        <h2 class="currentDate">Thursday, 2 June</h2>
         <div class="row">
-          <div class="col-4">
+          <div class="col-8">
+            <h1 id="city"></h1>
+            <i class="fa-regular fa-sun"></i>
             <ul class="currentTemp">
-              <li>
-                <span class="currentDegree">23</span>
-                <span class="celsius"> ℃</span> |
-                <a href="#" class="fahren">℉</a>
-              </li>
-              <li class="currentCondition">sunny</li>
+              <li class="currentDate"></li>
+              <div class="description">
+                <li id="conditions">Cloud</li>
+                <li>
+                  Wind: <span id="wind"></span> km/h, Humidity:
+                  <span id="humidity"></span> %
+                </li>
+              </div>
             </ul>
-          </div>
-          <div class="col">
-            <ul class="currentMorning">
-              <li>morning</li>
-              <li class="morningIcon"><i class="fa-solid fa-sun"></i></li>
-              <li class="morningTemp">+15℃</li>
-              <li class="morningConditions">sunny</li>
-            </ul>
-          </div>
-          <div class="col">
-            <ul class="currentDay">
-              <li>day</li>
-              <li class="dayIcon"><i class="fa-solid fa-cloud-sun"></i></li>
-              <li class="dayTemp">+20℃</li>
-              <li class="dayConditions">sun-cloud</li>
-            </ul>
-          </div>
-          <div class="col">
-            <ul class="currentEvening">
-              <li>evening</li>
-              <li class="eveningIcon"><i class="fa-solid fa-cloud"></i></li>
-              <li class="eveningTemp">+15℃</li>
-              <li class="eveningConditions">cloud</li>
-            </ul>
-          </div>
-          <div class="col">
-            <ul class="currentNight">
-              <li>night</li>
-              <li class="nightIcon">
-                <i class="fa-solid fa-cloud-rain"></i>
-              </li>
-              <li class="nightTemp">+11℃</li>
-              <li class="nightConditions">rain</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- <hr /> -->
-
-        <div class="row detailsWheather">
-          <div class="col-3">
-            perticipation
-            <p class="perticipation"><i class="fa-solid fa-umbrella"></i>60%</p>
-          </div>
-          <div class="col-3">
-            wind
-            <p>
-              <i class="fa-solid fa-wind"></i>
-              4mps
-            </p>
           </div>
 
-          <div class="col-3">
-            UV index
-            <p class="UV"><i class="fa-solid fa-temperature-half"></i>1/12</p>
-          </div>
-          <div class="col-3">
-            humidity
-            <p class="humidity"><i class="fa-solid fa-water"></i>73%</p>
+          <div class="col-4">
+            <div class="blockTemp">
+              <span id="temperature"></span> <span class="celsius"> ℃</span> |
+              <a href="#" class="fahren">℉</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="forecast5days">
-        <div class="row .forecast">
+      <section class="forecast">
+        <div class="row">
           <div class="col">
             <div class="card">
               <div class="card-body">
@@ -183,11 +133,11 @@
             </div>
           </div>
         </div>
+        <div class="signature">
+          <a href="https://github.com/HannieA/weather-app">Open source code</a>
+          by Hanna Anishyna
+        </div>
       </section>
-      <div class="signature">
-        <a href="https://github.com/HannieA/weather-app">Open source code</a> by
-        Hanna Anishyna
-      </div>
     </div>
 
     <script src="src/script.js"></script>
