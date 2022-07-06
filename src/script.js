@@ -1,7 +1,5 @@
 function formatDate(timestamp) {
   let date = new Date(timestamp);
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
   let days = [
     "Sunday",
     "Monday",
@@ -12,6 +10,15 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `${day}, 0${hours}:${minutes}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `${day}, ${hours}:0${minutes}`;
+  }
+
   return `${day}, ${hours}:${minutes}`;
 }
 
@@ -43,6 +50,17 @@ function showTemp(response) {
   humidity.innerHTML = Math.round(response.data.main.humidity);
   let currentTime = document.querySelector(".currentDate");
   currentTime.innerHTML = formatDate(response.data.dt * 1000);
+  let backgroundImage = document.querySelector("#background-image");
+  backgroundImage.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  let icon = document.querySelector("#icon");
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  console.log(response.data);
 }
 
 function handlePosition(position) {

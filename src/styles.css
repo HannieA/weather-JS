@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(#5f6ef2, #adb4fa, #95bef4);
+  background: linear-gradient(#5f6ef2, #adb4fa, #f2c4b8);
   font-family: "Comfortaa", cursive;
 }
 .container {
@@ -38,12 +38,12 @@ label {
   color: white;
 }
 
-img {
+#background-image {
   width: 380px;
   position: relative;
   left: 400px;
   top: -70px;
-  opacity: 0.08;
+  opacity: 0.15;
 }
 
 section.currentWheather {
@@ -59,13 +59,14 @@ section.currentWheather {
 }
 h1 {
   display: inline;
-  font-size: 65px;
+  font-size: 50px;
   text-transform: capitalize;
 }
-i.fa-regular.fa-sun {
-  font-size: 70px;
-  padding-left: 15px;
+#icon {
+  width: 55px;
+  vertical-align: bottom;
 }
+
 .currentDate {
   padding-top: 0px;
   font-size: 25px;
