@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- CSS only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
@@ -15,13 +16,7 @@
       src="https://kit.fontawesome.com/5063663fe0.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="src/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap"
-      rel="stylesheet"
-    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,6 +24,7 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
     <title>Wheather Forecast</title>
   </head>
   <body>
@@ -44,35 +40,25 @@
         <!-- <button id="buttonCurrentLoc">current location</button> -->
       </header>
 
-      <img
-        src="https://openweathermap.org/img/wn/2n@2x.png"
-        alt="cloud"
-        id="background-image"
-      />
       <section class="currentWheather">
-        <div class="row">
-          <div class="col-8">
+        <ul class="currentTemp">
+          <li>
             <h1 id="city"></h1>
             <img src="" alt="" id="icon" />
-            <ul class="currentTemp">
-              <li class="currentDate"></li>
-              <div class="description">
-                <li id="conditions">Cloud</li>
-                <li>
-                  Wind: <span id="wind"></span> km/h, Humidity:
-                  <span id="humidity"></span> %
-                </li>
-              </div>
-            </ul>
+          </li>
+          <li class="currentDate"></li>
+          <li class="temp">
+            <span id="temperature"></span> <span class="celsius"> ℃</span> |
+            <a href="#" class="fahren">℉</a>
+          </li>
+          <div class="description">
+            <li id="conditions">Cloud</li>
+            <li>
+              Wind: <span id="wind"></span> km/h, Humidity:
+              <span id="humidity"></span> %
+            </li>
           </div>
-
-          <div class="col-4">
-            <div class="blockTemp">
-              <span id="temperature"></span> <span class="celsius"> ℃</span> |
-              <a href="#" class="fahren">℉</a>
-            </div>
-          </div>
-        </div>
+        </ul>
       </section>
 
       <section class="forecast">
@@ -142,6 +128,7 @@
           <a href="https://github.com/HannieA/weather-app">Open source code</a>
           by Hanna Anishyna
         </div>
+        <img src="" alt="cloud" id="background-image" />
       </section>
     </div>
 

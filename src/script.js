@@ -36,10 +36,6 @@ function handleSearch(event) {
   search(searchValue.value);
 }
 
-let searchInput = document.querySelector("form");
-searchInput.addEventListener("submit", handleSearch);
-let celsiusTemp = null;
-
 function showTemp(response) {
   let city = response.data.name;
   let currentCity = document.querySelector("#city");
@@ -51,26 +47,34 @@ function showTemp(response) {
   displayTemp.innerHTML = currentTemp;
   let currentConditions = document.querySelector("#conditions");
   currentConditions.innerHTML = response.data.weather[0].description;
+  currentConditions = currentConditions.innerHTML;
   let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(response.data.wind.speed);
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = Math.round(response.data.main.humidity);
   let currentTime = document.querySelector(".currentDate");
   currentTime.innerHTML = formatDate(response.data.dt * 1000);
-  let backgroundImage = document.querySelector("#background-image");
-  backgroundImage.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
   let icon = document.querySelector("#icon");
   icon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  console.log(response.data);
-}
+  let backgroundImage = document.querySelector("#background-image");
 
-let isCelcius = true;
+  if (currentConditions.includes("clouds")) {
+    backgroundImage.setAttribute("src", "images/cloud.svg");
+  } else if (currentConditions.includes("rain", "thunderstrom")) {
+    backgroundImage.setAttribute("src", "images/rain.svg");
+  } else if (currentConditions.includes("rain", "thunderstrom", "drizzle")) {
+    backgroundImage.setAttribute("src", "images/rain.svg");
+  } else if (currentConditions.includes("snow", "sleet")) {
+    backgroundImage.setAttribute("src", "images/winter.svg");
+  } else if (currentConditions.includes("clear")) {
+    backgroundImage.setAttribute("src", "images/sun.svg");
+  } else {
+    backgroundImage.setAttribute("src", "images/mist.svg");
+  }
+}
 
 function switchToCelFahr() {
   let currentTemp = document.querySelector("#temperature");
@@ -90,6 +94,12 @@ function switchToCelFahr() {
     isCelcius = true;
   }
 }
+
+let searchInput = document.querySelector("form");
+searchInput.addEventListener("submit", handleSearch);
+let celsiusTemp = null;
+
+let isCelcius = true;
 
 let degreeLink = document.querySelector("a");
 degreeLink.addEventListener("click", switchToCelFahr);

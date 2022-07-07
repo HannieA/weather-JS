@@ -1,10 +1,13 @@
+html,
 body {
-  background: linear-gradient(#5f6ef2, #adb4fa, #f2c4b8);
+  min-height: 100%;
+}
+body {
+  background: linear-gradient(#aeb7ef, #f3d5cc);
   font-family: "Comfortaa", cursive;
 }
 .container {
   max-width: 800px;
-  margin: auto;
   padding-top: 30px;
 }
 #searchForm {
@@ -39,24 +42,24 @@ body {
 }
 
 #background-image {
-  width: 380px;
+  width: 350px;
+  height: 330px;
+  line-height: 1;
   position: relative;
-  left: 400px;
-  top: -70px;
-  opacity: 0.15;
+  left: 430px;
+  top: -580px;
+  transform: rotateY(180deg);
+  opacity: 0.9;
 }
 
 section.currentWheather {
-  position: relative;
-  top: -270px;
+  /* position: relative;
+  top: -270px; */
   color: white;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
-.col-8 {
-  text-align: left;
-}
 h1 {
   display: inline;
   font-size: 50px;
@@ -77,16 +80,17 @@ ul.currentTemp {
   padding-top: 0px;
   text-align: left;
 }
+li.temp {
+  line-height: 1;
+  padding-top: 10px;
+}
 
 #conditions:first-letter {
   text-transform: capitalize;
 }
-.blockTemp {
-  line-height: 1;
-}
 
 span#temperature {
-  font-size: 120px;
+  font-size: 90px;
 }
 .celsius,
 .fahren {
@@ -95,7 +99,7 @@ span#temperature {
 div.description {
   font-size: 18px;
   line-height: 28px;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 a {
@@ -114,10 +118,10 @@ div.col {
   padding-top: 50px;
 }
 
-.forecast {
+/* .forecast {
   position: relative;
   top: -280px;
-}
+} */
 .card {
   background-color: #5f6ef2;
   opacity: 0.7;
