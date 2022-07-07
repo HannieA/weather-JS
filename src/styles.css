@@ -3,7 +3,7 @@ body {
   min-height: 100%;
 }
 body {
-  background: linear-gradient(#6d81f6 10%, #c6cdfb 90%);
+  background: linear-gradient(#737ce1 10%, #c6cdfb 90%);
   font-family: "Comfortaa", cursive;
   color: white;
 }
@@ -38,7 +38,7 @@ body {
   transition: 180ms ease-in-out;
 }
 #searchButton:hover {
-  background-color: #596aca;
+  background-color: #6167dc;
   color: white;
 }
 
@@ -50,7 +50,6 @@ body {
   left: 430px;
   top: -580px;
   transform: rotateY(180deg);
-  opacity: 0.9;
 }
 
 section.currentWheather {
@@ -124,7 +123,7 @@ div.col {
   top: -280px;
 } */
 .card {
-  background-color: #596aca;
+  background-color: #6167dc;
   opacity: 0.7;
   margin-top: 0px;
   color: white;
