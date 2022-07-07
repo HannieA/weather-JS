@@ -5,36 +5,36 @@ body {
 .container {
   max-width: 800px;
   margin: auto;
-  padding: 30px;
+  padding-top: 30px;
 }
-input {
+#searchForm {
   border: 1px solid #596aca;
   color: gray;
   border-radius: 10px;
-  height: 35px;
+  height: 37px;
   width: 230px;
   font-size: smaller;
-  text-align: center;
+  text-align: left;
   padding-left: 10px;
 }
 
-label {
+/* label {
   color: white;
   font-size: 20px;
-}
-#buttonCurrentLoc {
+} */
+#searchButton {
   background-color: white;
   color: gray;
   font-size: smaller;
   text-align: center;
-  margin-top: 10px;
-  padding: 7px 58px;
+  margin-left: 10px;
+  padding: 7px 40px;
   border-radius: 10px;
   border: none;
   transition: 180ms ease-in-out;
 }
-#buttonCurrentLoc:hover {
-  background-color: #8e95e1;
+#searchButton:hover {
+  background-color: #5f6ef2;
   color: white;
 }
 
@@ -63,7 +63,7 @@ h1 {
   text-transform: capitalize;
 }
 #icon {
-  width: 55px;
+  width: 60px;
   vertical-align: bottom;
 }
 
