@@ -3,7 +3,7 @@ body {
   min-height: 100%;
 }
 body {
-  background: linear-gradient(#737ce1 10%, #c6cdfb 90%);
+  background: linear-gradient(#737ce1, #c6cdfb);
   font-family: "Comfortaa", cursive;
   color: white;
 }
@@ -160,6 +160,6 @@ ul.forecast1day,
 #temperature,
 #wind,
 #humidity {
-  color: #de542e;
+  color: #f08060;
   font-weight: bold;
 }
