@@ -46,9 +46,9 @@ body {
   width: 350px;
   height: 330px;
   line-height: 1;
-  position: relative;
+  /* position: relative;
   left: 430px;
-  top: -580px;
+  top: -580px; */
   transform: rotateY(180deg);
 }
 
@@ -69,7 +69,9 @@ h1 {
   width: 60px;
   vertical-align: bottom;
 }
-
+.currentDay {
+  padding-top: 40px;
+}
 .currentDate {
   padding-top: 0px;
   font-size: 25px;
@@ -109,12 +111,14 @@ ul {
   list-style: none;
   text-align: center;
 }
-
+#forecast {
+  margin-top: 50px;
+}
 div.row {
   text-align: center;
 }
 div.col {
-  padding-top: 50px;
+  padding-top: 0px;
 }
 
 /* .forecast {

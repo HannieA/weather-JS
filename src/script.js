@@ -124,6 +124,8 @@ function showTemp(response) {
 
   getForecast(response.data.coord);
 }
+let searchInput = document.querySelector("form");
+searchInput.addEventListener("submit", handleSearch);
 
 search("Kyiv");
 

@@ -41,31 +41,40 @@
       </header>
 
       <section class="currentWheather">
-        <ul class="currentTemp">
-          <li>
-            <h1 id="city"></h1>
-            <img src="" alt="" id="icon" />
-          </li>
-          <li class="currentDate"></li>
-          <li class="temp">
-            <span id="temperature"></span> <span class="celsius"> ℃</span>
-          </li>
-          <div class="description">
-            <li id="conditions">Cloud</li>
-            <li>
-              Wind: <span id="wind"></span> km/h, Humidity:
-              <span id="humidity"></span> %
-            </li>
+        <div class="row">
+          <div class="col">
+            <div class="currentDay">
+              <ul class="currentTemp">
+                <li>
+                  <h1 id="city"></h1>
+                  <img src="" alt="" id="icon" />
+                </li>
+                <li class="currentDate"></li>
+                <li class="temp">
+                  <span id="temperature"></span> <span class="celsius"> ℃</span>
+                </li>
+                <div class="description">
+                  <li id="conditions">Cloud</li>
+                  <li>
+                    Wind: <span id="wind"></span> km/h, Humidity:
+                    <span id="humidity"></span> %
+                  </li>
+                </div>
+              </ul>
+            </div>
           </div>
-        </ul>
+          <div class="col">
+            <img src="" alt="cloud" id="background-image" />
+          </div>
+        </div>
       </section>
 
       <section id="forecast"></section>
+
       <div class="signature">
         <a href="https://github.com/HannieA/weather-app">Open source code</a>
         by Hanna Anishyna
       </div>
-      <img src="" alt="cloud" id="background-image" />
     </div>
     <script src="src/script.js"></script>
   </body>
