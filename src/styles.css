@@ -92,8 +92,7 @@ li.temp {
 span#temperature {
   font-size: 90px;
 }
-.celsius,
-.fahren {
+.celsius {
   font-size: 25px;
 }
 div.description {

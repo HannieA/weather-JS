@@ -43,7 +43,6 @@ function handleSearch(event) {
 }
 
 function showForecast(response) {
-  console.log(response.data.daily);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
@@ -63,7 +62,7 @@ function showForecast(response) {
                   }@2x.png < /></li>
                   <li class="temperature-forecast">${Math.round(
                     forecast.temp.max
-                  )} <span class=degree-forecast>℃</span> | <span class=degree-forecast>℉</span> </li>
+                  )} <span class="celsius-forecast">℃</span> </li>
                 </ul>
               </div>
             </div>
@@ -123,34 +122,6 @@ function showTemp(response) {
 
   getForecast(response.data.coord);
 }
-
-function switchToCelFahr() {
-  let currentTemp = document.querySelector("#temperature");
-  let celsius = document.querySelector(".celsius");
-  let fahrenheit = document.querySelector(".fahren");
-
-  if (isCelcius) {
-    let fahrenheitTemp = Math.round((celsiusTemp * 9) / 5 + 32);
-    currentTemp.innerHTML = fahrenheitTemp;
-    celsius.innerHTML = "℉";
-    fahrenheit.innerHTML = "℃";
-    isCelcius = false;
-  } else {
-    currentTemp.innerHTML = celsiusTemp;
-    celsius.innerHTML = "℃";
-    fahrenheit.innerHTML = "℉";
-    isCelcius = true;
-  }
-}
-
-let searchInput = document.querySelector("form");
-searchInput.addEventListener("submit", handleSearch);
-let celsiusTemp = null;
-
-let isCelcius = true;
-
-let degreeLink = document.querySelector("a");
-degreeLink.addEventListener("click", switchToCelFahr);
 
 search("Kyiv");
 
