@@ -130,21 +130,11 @@ div.col {
 }
 ul.forecast {
   padding: 0px;
+  font-size: 18px;
 }
 
-.temperature1,
-.temperature2,
-.temperature3,
-.temperature4,
-.temperature5 {
-  font-size: 25px;
-}
-.icon1,
-.icon2,
-.icon3,
-.icon4,
-.icon5 {
-  font-size: 25px;
+.icon-forecast {
+  width: 50px;
 }
 
 .signature {

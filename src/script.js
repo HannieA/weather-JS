@@ -29,6 +29,12 @@ function search(city) {
 
   axios.get(apiUrl).then(showTemp);
 }
+function formatForecastDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = days[date.getDay()];
+  return day;
+}
 
 function handleSearch(event) {
   event.preventDefault();
@@ -38,27 +44,31 @@ function handleSearch(event) {
 
 function showForecast(response) {
   console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-
-  let days = ["Thu", "Wed", "Thr", "Fri", "Sat"];
 
   let forecastHtml = `<div class="row">`;
 
-  days.forEach(function (day) {
-    forecastHtml +=
-      // forecastHtml +
-      `<div class="col">
+  forecast.forEach(function (forecast, index) {
+    if (index < 5) {
+      forecastHtml += `<div class="col">
             <div class="card">
               <div class="card-body">
                 <ul class="forecast">
-                  <li class="day1">${day}</li>
-                  <li class="date1">03 June</li>
-                  <li class="icon1"><i class="fa-solid fa-sun"></i></li>
-                  <li class="temperature1">+15℃</li>
+                  <li class="day-forecast">${formatForecastDay(
+                    forecast.dt
+                  )}</li>
+                  <li> <img class="icon-forecast" src=https://openweathermap.org/img/wn/${
+                    forecast.weather[0].icon
+                  }@2x.png < /></li>
+                  <li class="temperature-forecast">${Math.round(
+                    forecast.temp.max
+                  )} <span class=degree-forecast>℃</span> | <span class=degree-forecast>℉</span> </li>
                 </ul>
               </div>
             </div>
           </div>`;
+    }
   });
 
   forecastHtml += `</div>`;
@@ -93,7 +103,7 @@ function showTemp(response) {
   let icon = document.querySelector("#icon");
   icon.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   let backgroundImage = document.querySelector("#background-image");
 
