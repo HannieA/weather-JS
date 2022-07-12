@@ -36,6 +36,42 @@ function handleSearch(event) {
   search(searchValue.value);
 }
 
+function showForecast(response) {
+  console.log(response.data.daily);
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Wed", "Thr", "Fri", "Sat"];
+
+  let forecastHtml = `<div class="row">`;
+
+  days.forEach(function (day) {
+    forecastHtml +=
+      // forecastHtml +
+      `<div class="col">
+            <div class="card">
+              <div class="card-body">
+                <ul class="forecast">
+                  <li class="day1">${day}</li>
+                  <li class="date1">03 June</li>
+                  <li class="icon1"><i class="fa-solid fa-sun"></i></li>
+                  <li class="temperature1">+15℃</li>
+                </ul>
+              </div>
+            </div>
+          </div>`;
+  });
+
+  forecastHtml += `</div>`;
+  forecastElement.innerHTML = forecastHtml;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "b742faf6701ac8c3f14958c33ae33625";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(showForecast);
+}
+
 function showTemp(response) {
   let city = response.data.name;
   let currentCity = document.querySelector("#city");
@@ -74,6 +110,8 @@ function showTemp(response) {
   } else {
     backgroundImage.setAttribute("src", "images/mist.svg");
   }
+
+  getForecast(response.data.coord);
 }
 
 function switchToCelFahr() {

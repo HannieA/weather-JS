@@ -128,11 +128,7 @@ div.col {
   margin-top: 0px;
   color: white;
 }
-ul.forecast1day,
-.forecast2day,
-.forecast3day,
-.forecast4day,
-.forecast5day {
+ul.forecast {
   padding: 0px;
 }
 
