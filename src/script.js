@@ -60,9 +60,11 @@ function showForecast(response) {
                   <li> <img class="icon-forecast" src=https://openweathermap.org/img/wn/${
                     forecast.weather[0].icon
                   }@2x.png < /></li>
-                  <li class="temperature-forecast">${Math.round(
+                  <li class="temperature-max"> <span> ${Math.round(
                     forecast.temp.max
-                  )} <span class="celsius-forecast">℃</span> </li>
+                  )}</span>° | <span class="temperature-min">${Math.round(
+        forecast.temp.min
+      )}</span>° </li>
                 </ul>
               </div>
             </div>

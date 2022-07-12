@@ -133,7 +133,7 @@ ul.forecast {
 }
 
 .icon-forecast {
-  width: 50px;
+  width: 55px;
 }
 
 .signature {
@@ -147,4 +147,8 @@ ul.forecast {
 #humidity {
   color: #ec6642;
   font-weight: bold;
+}
+
+.temperature-min {
+  font-size: 15px;
 }
