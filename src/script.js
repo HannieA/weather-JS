@@ -128,33 +128,3 @@ let searchInput = document.querySelector("form");
 searchInput.addEventListener("submit", handleSearch);
 
 search("Kyiv");
-
-// function handlePosition(position) {
-//   let laitude = position.coords.latitude;
-//   let longitude = position.coords.longitude;
-//   let apiKey = "b742faf6701ac8c3f14958c33ae33625";
-//   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${laitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
-//   axios.get(apiUrl).then(showLocationTemp);
-// }
-
-// function showLocationTemp(response) {
-//   let locationTemp = Math.round(response.data.main.temp);
-//   let locationCity = response.data.name;
-//   let displayTemp = document.querySelector("#temperature");
-//   displayTemp.innerHTML = locationTemp;
-//   let header = document.querySelector("h1");
-//   header.innerHTML = locationCity;
-//   let currentConditions = document.querySelector("#conditions");
-//   currentConditions.innerHTML = response.data.weather[0].main;
-//   let wind = document.querySelector("#wind");
-//   wind.innerHTML = Math.round(response.data.wind.speed);
-//   let humidity = document.querySelector("#humidity");
-//   humidity.innerHTML = Math.round(response.data.main.humidity);
-// }
-
-// function getLocation() {
-//   navigator.geolocation.getCurrentPosition(handlePosition);
-// }
-
-// let button = document.querySelector("#buttonCurrentLoc");
-// button.addEventListener("click", getLocation);

@@ -9,9 +9,6 @@ body {
 }
 
 section.currentWheather {
-  /* position: relative;
-  top: -270px; */
-
   width: 100%;
   padding-top: 40px;
 }
@@ -100,7 +97,6 @@ ul.forecast {
   width: 350px;
   height: 330px;
   line-height: 1;
-
   transform: rotateY(180deg);
 }
 #icon {
